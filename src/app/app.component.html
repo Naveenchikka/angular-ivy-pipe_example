@@ -1,0 +1,24 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <button (click)="onAddBird()">Add Bird</button>
+    </div>
+  </div>
+</div>
+<div>
+  <input type="text" class="form-control" [(ngModel)]="filteredString"/>
+</div>
+<h2>Birds</h2>  
+<p>List of Birds</p>  
+<div>  
+  <ul>
+   <li *ngFor="let bird of birds | myfilter:filteredString">  
+    {{bird.name}}  
+   </li>   
+  </ul>  
+</div>  
